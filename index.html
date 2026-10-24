@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="E-modul Biologi SMA: Konservasi Keanekaragaman Hayati berbasis Etnosains dan Kearifan Lokal.">
+<title>Jejak Lestari | E-Modul Biologi SMA</title>
+<style>
+:root{--forest:#173b2d;--green:#4b6846;--sage:#edf0e5;--cream:#fbf8ef;--ink:#2d352b;--muted:#687365;--line:#d9ddcf;--gold:#bca36a}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--cream);font:16px/1.75 "Segoe UI",Arial,sans-serif;color:var(--ink)}
+header{position:sticky;top:0;z-index:20;background:rgba(250,249,243,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px clamp(16px,5vw,72px);display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:800;color:var(--forest);font-size:20px;text-decoration:none;letter-spacing:-.5px}.brand span{color:var(--green);font-weight:400}
+header .tag{font-size:11px;letter-spacing:1.5px;font-weight:700;color:var(--green)}
+.layout{max-width:1400px;margin:auto;display:grid;grid-template-columns:275px minmax(0,1fr);gap:0}
+aside{position:sticky;top:65px;height:calc(100vh - 65px);overflow:auto;background:#f5f7f0;border-right:1px solid var(--line);padding:25px 17px}
+.aside-title{font-size:10px;letter-spacing:1.6px;font-weight:800;color:#6f876e;margin:0 8px 13px}
+.toc-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;color:#53675a;padding:9px 10px;border-radius:3px;font-size:12px;line-height:1.5;margin:3px 0}
+.toc-link:hover,.toc-link:focus{background:white;color:var(--forest);outline:1px solid #d8e4d3}
+.toc-link .num{font-size:10px;font-weight:800;color:#8ca080;min-width:23px}
+.aside-note{margin:25px 8px 0;padding-top:16px;border-top:1px solid var(--line);font-family:Georgia,serif;font-style:italic;font-size:13px;color:#748573}
+main{padding:30px clamp(18px,4vw,62px) 55px;min-width:0}
+section{scroll-margin-top:92px;padding:38px 0;border-bottom:1px solid var(--line)}
+.cover{padding:0 0 35px;border:0}
+.hero{display:grid;grid-template-columns:1fr;gap:30px;align-items:center;position:relative;isolation:isolate;min-height:590px;padding:clamp(28px,5vw,68px);background:linear-gradient(90deg,rgba(10,35,24,.88),rgba(10,35,24,.58) 60%,rgba(10,35,24,.25)),url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2000&q=90') center/cover no-repeat;border:8px solid #e8e0cb;box-shadow:inset 0 0 0 1px #b7a77e}
+.hero>div{max-width:760px}
+.hero .eyebrow{color:#e6d6a6}
+.hero h1,.hero h1 em{color:#fff}
+.hero .lead{color:#f0ead8}
+.hero .muted{color:#e2e6dc}
+.hero .author{color:#fff}
+.hero .avatar{background:#e8e0cb;color:#173b2d}
+.hero img{display:none}
+.hero .button{border-radius:3px;background:#e4d7ae;color:#203a2c}
+.hero .button.secondary{background:transparent;color:#fff;border:1px solid #e4d7ae}
+
+.eyebrow{font-size:10px;font-weight:800;letter-spacing:1.7px;color:#64815e}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--forest);line-height:1.2}
+h1{font-size:clamp(42px,5vw,68px);letter-spacing:-.5px;margin:15px 0}
+h1 em{font-weight:400;color:#5c8058}
+h2{font-size:clamp(28px,3vw,39px);margin:10px 0 18px}
+h3{font-size:21px;margin:8px 0}
+p{margin:0 0 14px}
+.lead{font-size:18px;line-height:1.6;font-weight:600;color:#45654d}
+.muted{color:var(--muted)}
+.hero img,.wide-img{width:100%;object-fit:cover;border-radius:100px 100px 14px 14px;max-height:420px;min-height:270px}
+.hero img{height:380px}
+.author{display:flex;gap:11px;align-items:center;margin-top:26px;font-size:13px}
+.avatar{width:38px;height:38px;border-radius:50%;background:var(--sage);display:grid;place-items:center;color:var(--forest);font-family:Georgia,serif;font-size:20px}
+.button{display:inline-block;background:var(--forest);color:#fff;border:0;border-radius:3px;padding:12px 17px;font-weight:700;font-size:13px;text-decoration:none;cursor:pointer;margin:7px 6px 0 0}
+.button.secondary{background:white;color:var(--forest);border:1px solid #cbdac6}
+.button:hover{filter:brightness(1.1)}
+.panel{background:white;border:1px solid var(--line);border-radius:4px;padding:22px;margin:16px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{padding:19px;border:1px solid var(--line);background:white;border-radius:4px}
+.card .index{display:inline-block;background:var(--sage);border-radius:7px;padding:4px 9px;color:var(--green);font-size:11px;font-weight:800}
+.card p{font-size:14px;color:var(--muted);margin-bottom:0}
+.callout{background:#eef4e8;border-left:4px solid #78966b;padding:16px 19px;border-radius:0 10px 10px 0;margin:20px 0}
+.callout strong{color:var(--forest)}
+figure{margin:18px 0}figure img{width:100%;height:250px;object-fit:cover;border-radius:4px}figcaption{font-size:12px;color:#7c897d;margin-top:7px}
+.toc-table{width:100%;border-collapse:collapse;font-size:14px;background:white;border-radius:12px;overflow:hidden}
+.toc-table th,.toc-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
+.toc-table th{background:#eef4e8;color:var(--forest);font-size:12px;letter-spacing:.5px}
+.toc-table a{color:var(--green);font-weight:700;text-decoration:none}.toc-table a:hover{text-decoration:underline}
+.page-no{font-size:11px;color:#8a998a;white-space:nowrap}
+.section-head{display:flex;gap:15px;align-items:flex-start;margin-bottom:19px}
+.section-num{font-size:11px;font-weight:800;letter-spacing:1px;color:#7d9872;background:var(--sage);padding:7px 9px;border-radius:7px;margin-top:4px}
+.section-head p{color:var(--muted);max-width:760px}
+.practice{display:grid;grid-template-columns:95px 1fr;gap:16px;align-items:center;margin:13px 0;padding:15px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.practice-icon{height:90px;display:grid;place-items:center;background:var(--sage);border-radius:9px;font-size:36px;color:var(--green)}
+.practice p{font-size:14px;color:var(--muted);margin:0}
+label{display:block;font-weight:700;font-size:13px;margin:14px 0 5px}
+textarea{width:100%;border:1px solid #d4dfd0;border-radius:8px;padding:11px;font:14px/1.6 inherit;resize:vertical}
+.quiz-q{padding:18px;background:#fff;border:1px solid var(--line);border-radius:12px;margin:13px 0}
+.quiz-q h3{font:600 15px/1.6 "Segoe UI",Arial,sans-serif;margin:0 0 12px}
+.option{display:block;padding:9px 11px;margin:6px 0;border:1px solid #e5ebe1;border-radius:8px;font-size:14px;cursor:pointer}
+.option:hover{background:#f7faf4}.option input{margin-right:9px;accent-color:var(--forest)}
+.feedback{margin-top:10px;padding:10px;border-radius:7px;font-size:13px}.good{background:#eaf5e6;color:#315d38}.bad{background:#fff0eb;color:#8a493c}
+#result{padding:20px;background:#eef4e8;border-radius:12px;margin:20px 0}
+footer{padding:25px 0 5px;color:#89968b;font-size:11px;display:flex;justify-content:space-between;gap:10px}
+.backtop{position:fixed;right:18px;bottom:18px;border-radius:50%;width:44px;height:44px;background:var(--forest);color:white;text-decoration:none;display:grid;place-items:center;box-shadow:0 5px 20px #183f3230}
+@media(max-width:850px){.layout{grid-template-columns:1fr}aside{position:relative;top:auto;height:auto;max-height:none;border-right:0;border-bottom:1px solid var(--line);padding:14px 16px}.toc-list{display:flex;overflow-x:auto;gap:5px}.toc-link{white-space:nowrap;flex:0 0 auto;background:#fff;border:1px solid var(--line)}.aside-title,.aside-note{display:none}main{padding:20px 18px 35px}.hero{grid-template-columns:1fr;min-height:520px;padding:25px;border-width:5px}.hero img{height:300px;min-height:0;max-height:350px}.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){header .tag{display:none}.grid2{grid-template-columns:1fr}.practice{grid-template-columns:68px 1fr;padding:10px;gap:11px}.practice-icon{height:75px}.toc-table th,.toc-table td{padding:9px 8px;font-size:12px}.hero img{height:260px}footer{flex-direction:column}}
+@media print{header,aside,.button,.backtop{display:none!important}.layout{display:block}main{padding:0 15px}section{break-inside:avoid}.hero img{max-height:250px}}
+</style>
+</head>
+<body id="top">
+<header>
+  <a class="brand" href="#top">✿ jejak<span>lestari</span></a>
+  <span class="tag">E-MODUL BIOLOGI · SMA</span>
+</header>
+<div class="layout">
+<aside>
+  <p class="aside-title">DAFTAR ISI · NAVIGASI</p>
+  <nav class="toc-list" aria-label="Navigasi daftar isi">
+    <a class="toc-link" href="#cover"><span class="num">00</span>Sampul</a>
+    <a class="toc-link" href="#kata-pengantar"><span class="num">01</span>Kata Pengantar</a>
+    <a class="toc-link" href="#daftar-isi"><span class="num">02</span>Daftar Isi</a>
+    <a class="toc-link" href="#pendahuluan"><span class="num">03</span>Pendahuluan</a>
+    <a class="toc-link" href="#biodiversitas"><span class="num">04</span>Keanekaragaman Hayati</a>
+    <a class="toc-link" href="#konservasi"><span class="num">05</span>Ancaman & Konservasi</a>
+    <a class="toc-link" href="#etnosains"><span class="num">06</span>Etnosains & Kearifan Lokal</a>
+    <a class="toc-link" href="#aksi"><span class="num">07</span>Aksi Konservasi</a>
+    <a class="toc-link" href="#kuis"><span class="num">08</span>Kuis</a>
+    <a class="toc-link" href="#pustaka"><span class="num">09</span>Daftar Pustaka</a>
+  </nav>
+  <div class="aside-note">“Kenali alam, hargai pengetahuan lokal, dan rawat kehidupan.”</div>
+</aside>
+
+<main>
+<section class="cover" id="cover">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">BELAJAR DARI ALAM · MENJAGA MASA DEPAN</span>
+      <h1>Jejak <em>Lestari</em></h1>
+      <p class="lead">Konservasi Keanekaragaman Hayati melalui Etnosains dan Kearifan Lokal</p>
+      <p class="muted">E-modul Biologi untuk jenjang SMA yang menghubungkan konsep ilmiah dengan pengetahuan masyarakat dan praktik pelestarian lingkungan.</p>
+      <div class="author"><span class="avatar">Y</span><span><small>Disusun oleh</small><br><strong>Yunia Dwi Rahmawati</strong></span></div>
+      <a class="button" href="#kata-pengantar">Mulai membaca ↓</a>
+      <a class="button secondary" href="#daftar-isi">Buka daftar isi</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85" alt="Hutan hijau sebagai habitat keanekaragaman hayati">
+  </div>
+</section>
+
+<section id="kata-pengantar">
+  <div class="section-head"><span class="section-num">01</span><div><span class="eyebrow">PENGANTAR</span><h2>Kata Pengantar</h2></div></div>
+  <p>Puji syukur ke hadirat Tuhan Yang Maha Esa karena e-modul Biologi berjudul <em>“Jejak Lestari: Konservasi Keanekaragaman Hayati melalui Etnosains dan Kearifan Lokal”</em> ini dapat disusun sebagai bahan belajar bagi peserta didik SMA.</p>
+  <p>E-modul ini mengajak peserta didik memahami keanekaragaman hayati, ancaman terhadap kelestariannya, serta berbagai upaya konservasi. Materi juga menghubungkan pengetahuan biologi dengan etnosains dan kearifan lokal, yaitu pengetahuan, nilai, serta praktik masyarakat dalam berinteraksi dengan lingkungan.</p>
+  <p>Melalui materi bergambar, navigasi interaktif, kegiatan refleksi, dan kuis otomatis, peserta didik diharapkan dapat belajar secara mandiri, berpikir kritis, dan merancang tindakan sederhana untuk menjaga lingkungan. Pengetahuan lokal dibahas dengan menghormati masyarakat pemiliknya serta mengkajinya secara kritis berdasarkan bukti yang relevan.</p>
+  <p>Penyusun menyadari bahwa e-modul ini masih dapat dikembangkan. Saran dan masukan sangat diharapkan agar materi dan aktivitas pembelajaran menjadi lebih baik. Semoga e-modul ini bermanfaat dan menumbuhkan kepedulian terhadap kelestarian keanekaragaman hayati.</p>
+  <p style="text-align:right;margin-top:28px">Penyusun,<br><strong>Yunia Dwi Rahmawati</strong></p>
+</section>
+
+<section id="daftar-isi">
+  <div class="section-head"><span class="section-num">02</span><div><span class="eyebrow">PETA PEMBELAJARAN</span><h2>Daftar Isi</h2><p>Pilih judul atau tombol “Buka” untuk langsung menuju bagian yang diinginkan. Nomor halaman merupakan nomor bagian pada versi website ini.</p></div></div>
+  <table class="toc-table">
+    <thead><tr><th>Bagian</th><th>Isi</th><th>Halaman</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>01</td><td><a href="#kata-pengantar">Kata Pengantar</a></td><td class="page-no">1</td><td><a href="#kata-pengantar">Buka ↗</a></td></tr>
+      <tr><td>02</td><td><a href="#pendahuluan">Pendahuluan</a></td><td class="page-no">2</td><td><a href="#pendahuluan">Buka ↗</a></td></tr>
+      <tr><td>03</td><td><a href="#biodiversitas">Mengenal Keanekaragaman Hayati</a></td><td class="page-no">3</td><td><a href="#biodiversitas">Buka ↗</a></td></tr>
+      <tr><td>04</td><td><a href="#konservasi">Ancaman dan Konservasi</a></td><td class="page-no">4</td><td><a href="#konservasi">Buka ↗</a></td></tr>
+      <tr><td>05</td><td><a href="#etnosains">Etnosains dan Kearifan Lokal</a></td><td class="page-no">5</td><td><a href="#etnosains">Buka ↗</a></td></tr>
+      <tr><td>06</td><td><a href="#aksi">Aksi Konservasi dan Refleksi</a></td><td class="page-no">6</td><td><a href="#aksi">Buka ↗</a></td></tr>
+      <tr><td>07</td><td><a href="#kuis">Kuis Evaluasi</a></td><td class="page-no">7</td><td><a href="#kuis">Buka ↗</a></td></tr>
+      <tr><td>08</td><td><a href="#pustaka">Daftar Pustaka</a></td><td class="page-no">8</td><td><a href="#pustaka">Buka ↗</a></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="pendahuluan">
+  <div class="section-head"><span class="section-num">03</span><div><span class="eyebrow">ORIENTASI BELAJAR</span><h2>Pendahuluan</h2><p>Kenali arah pembelajaran sebelum menjelajahi materi.</p></div></div>
+  <div class="grid2">
+    <article class="card"><span class="index">A</span><h3>Deskripsi singkat</h3><p>E-modul membahas konsep keanekaragaman hayati, ancaman dan strategi konservasi, serta hubungan ilmu biologi dengan etnosains dan kearifan lokal.</p></article>
+    <article class="card"><span class="index">B</span><h3>Tujuan pembelajaran</h3><p>Peserta didik mampu menjelaskan tingkat keanekaragaman hayati, membedakan konservasi in situ dan ex situ, serta menganalisis peran pengetahuan lokal dalam upaya pelestarian.</p></article>
+  </div>
+  <div class="callout"><strong>Petunjuk penggunaan</strong><p>Gunakan daftar isi di samping atau tautan di dalam halaman untuk berpindah bagian. Baca materi secara berurutan, kerjakan refleksi, lalu selesaikan kuis di akhir modul. Koneksi internet diperlukan untuk memuat foto.</p></div>
+</section>
+
+<section id="biodiversitas">
+  <div class="section-head"><span class="section-num">04</span><div><span class="eyebrow">MATERI 01</span><h2>Mengenal Keanekaragaman Hayati</h2><p>Keanekaragaman hayati adalah variasi makhluk hidup yang membentuk jaringan kehidupan di bumi.</p></div></div>
+  <figure><img class="wide-img" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=85" alt="Satwa liar di habitat alami"><figcaption>Setiap spesies memiliki peran dalam menjaga keseimbangan ekosistem.</figcaption></figure>
+  <div class="grid3">
+    <article class="card"><span class="index">01</span><h3>Keanekaragaman gen</h3><p>Variasi sifat dalam satu spesies. Contohnya perbedaan varietas padi atau warna bunga dalam satu jenis tumbuhan.</p></article>
+    <article class="card"><span class="index">02</span><h3>Keanekaragaman spesies</h3><p>Variasi jenis organisme di suatu wilayah, misalnya berbagai jenis burung, serangga, pohon, dan pakis.</p></article>
+    <article class="card"><span class="index">03</span><h3>Keanekaragaman ekosistem</h3><p>Variasi ekosistem beserta lingkungan fisiknya, seperti hutan hujan, mangrove, rawa gambut, dan terumbu karang.</p></article>
+  </div>
+  <h3 style="margin-top:26px">Faktor yang memengaruhi keanekaragaman hayati</h3>
+  <p><strong>Iklim.</strong> Suhu, curah hujan, kelembapan, dan intensitas cahaya memengaruhi jenis organisme yang mampu hidup di suatu wilayah. Daerah tropis yang hangat dan relatif lembap dapat mendukung produktivitas tumbuhan yang tinggi, meskipun setiap spesies tetap memiliki kebutuhan lingkungan tertentu.</p>
+  <p><strong>Kondisi tanah dan air.</strong> Kandungan unsur hara, tingkat keasaman, tekstur tanah, salinitas, serta ketersediaan air menentukan jenis tumbuhan yang dapat tumbuh. Perbedaan vegetasi kemudian memengaruhi jenis hewan, jamur, dan mikroorganisme yang hidup di wilayah tersebut.</p>
+  <p><strong>Letak geografis dan sejarah evolusi.</strong> Pulau, pegunungan, sungai, dan laut dapat membatasi perpindahan organisme. Populasi yang terpisah dalam waktu lama dapat berkembang menjadi populasi dengan ciri berbeda. Karena itu, beberapa wilayah memiliki spesies endemik yang tidak ditemukan secara alami di tempat lain.</p>
+  <h3>Hubungan antarkomponen dalam ekosistem</h3>
+  <p>Ekosistem terdiri atas komponen biotik, yaitu makhluk hidup, dan komponen abiotik, seperti air, udara, cahaya, suhu, serta tanah. Keduanya saling berinteraksi. Tumbuhan berperan sebagai produsen, hewan tertentu sebagai konsumen, sedangkan jamur dan bakteri membantu penguraian bahan organik. Energi mengalir melalui rantai dan jaring-jaring makanan, sementara unsur hara didaur ulang melalui proses alam.</p>
+  <p>Ketika satu komponen terganggu, dampaknya dapat menjalar ke komponen lain. Hilangnya tumbuhan berbunga, misalnya, dapat mengurangi sumber pakan bagi penyerbuk. Berkurangnya tutupan hutan juga dapat mengubah kelembapan tanah, meningkatkan risiko erosi, dan mengurangi tempat berlindung satwa. Inilah alasan perlindungan habitat sama pentingnya dengan perlindungan spesies tertentu.</p>
+  <figure><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=85" alt="Satwa liar di habitat alaminya"><figcaption>Setiap organisme memiliki peran dalam jaringan kehidupan dan menjaga fungsi ekosistem.</figcaption></figure>
+  <h3>Manfaat keanekaragaman hayati bagi kehidupan</h3>
+  <p><strong>Manfaat ekologis.</strong> Tumbuhan menghasilkan oksigen dan menyerap karbon dioksida, akar membantu menahan tanah, serangga dan hewan lain membantu penyerbukan atau penyebaran biji, sedangkan mikroorganisme menguraikan sisa makhluk hidup dan mengembalikan unsur hara ke tanah.</p>
+  <p><strong>Manfaat ekonomi.</strong> Keanekaragaman hayati menyediakan sumber pangan, kayu, serat, bahan obat, tanaman hias, serta bahan baku bagi pertanian, perikanan, dan industri. Pemanfaatannya perlu memperhatikan regenerasi sumber daya dan daya dukung lingkungan agar tidak merusak keberlanjutan.</p>
+  <p><strong>Manfaat sosial dan budaya.</strong> Berbagai tumbuhan dan hewan memiliki arti dalam tradisi, cerita rakyat, kuliner, pengobatan tradisional, dan identitas masyarakat. Hubungan budaya dengan alam merupakan bagian penting yang dapat dipelajari melalui etnosains.</p>
+  <div class="callout"><strong>Mengapa penting?</strong><p>Keanekaragaman hayati menyediakan pangan, bahan baku, sumber obat, jasa ekosistem, serta nilai budaya bagi manusia. Hilangnya satu spesies juga dapat memengaruhi organisme lain yang bergantung padanya.</p></div>
+  <div class="panel"><strong>Refleksi singkat</strong><p>Sebutkan satu tumbuhan atau hewan khas daerahmu. Apa manfaatnya bagi masyarakat dan lingkungan?</p><p class="muted">Tuliskan jawaban di buku catatan atau pada bagian refleksi.</p></div>
+</section>
+
+<section id="konservasi">
+  <div class="section-head"><span class="section-num">05</span><div><span class="eyebrow">MATERI 02</span><h2>Ancaman dan Konservasi</h2><p>Konservasi adalah upaya melindungi, memelihara, dan memanfaatkan keanekaragaman hayati secara bijaksana agar tetap lestari.</p></div></div>
+  <figure><img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=85" alt="Pepohonan dan cahaya di dalam hutan"><figcaption>Habitat yang sehat membantu menopang kehidupan beragam organisme.</figcaption></figure>
+  <h3>Ancaman terhadap keanekaragaman hayati</h3>
+  <div class="grid2">
+    <article class="card"><h3>Perubahan habitat</h3><p>Alih fungsi lahan, deforestasi, dan fragmentasi habitat dapat mengurangi ruang hidup organisme.</p></article>
+    <article class="card"><h3>Eksploitasi berlebihan</h3><p>Perburuan, penangkapan, atau pemanenan yang tidak terkendali dapat menurunkan populasi spesies.</p></article>
+    <article class="card"><h3>Pencemaran</h3><p>Limbah dan bahan pencemar dapat mengganggu kualitas air, tanah, udara, dan kesehatan organisme.</p></article>
+    <article class="card"><h3>Perubahan iklim</h3><p>Perubahan suhu dan pola hujan dapat menggeser habitat serta mengganggu siklus kehidupan.</p></article>
+  </div>
+  <p>Ancaman tersebut sering saling berkaitan. Sebagai contoh, pembukaan lahan dapat memecah habitat menjadi petak-petak kecil. Populasi yang terisolasi akan lebih sulit berpindah untuk mencari makanan atau pasangan, sementara tepi habitat yang baru dapat menjadi lebih panas dan kering. Jika kondisi ini berlangsung lama, kemampuan populasi untuk bertahan dapat menurun.</p>
+  <p>Spesies asing invasif juga dapat menjadi ancaman ketika organisme yang masuk ke wilayah baru berkembang pesat dan menekan spesies asli, misalnya melalui persaingan mendapatkan makanan atau ruang. Tidak semua spesies pendatang bersifat invasif; dampaknya perlu dinilai berdasarkan bukti dan kondisi ekosistem setempat.</p>
+  <h3>Langkah konservasi yang dapat dilakukan</h3>
+  <ul>
+    <li>Melindungi habitat alami dan menjaga koridor yang menghubungkan kawasan habitat.</li>
+    <li>Memulihkan kawasan yang rusak menggunakan jenis lokal yang sesuai dengan kondisi ekosistem.</li>
+    <li>Mengurangi pencemaran dan mengelola sampah sejak dari sumbernya.</li>
+    <li>Menggunakan hasil hutan, ikan, tumbuhan, dan sumber daya lain dengan memperhatikan musim, ukuran, jumlah panen, serta kemampuan pulihnya.</li>
+    <li>Melibatkan masyarakat setempat, peneliti, sekolah, dan pemerintah dalam perencanaan serta pemantauan.</li>
+  </ul>
+  <h3 style="margin-top:25px">Dua pendekatan konservasi</h3>
+  <div class="grid2">
+    <article class="card"><span class="index">IN SITU</span><h3>Di habitat asli</h3><p>Melindungi spesies dalam ekosistem alaminya. Contoh: taman nasional, cagar alam, suaka margasatwa, dan perlindungan hutan adat.</p></article>
+    <article class="card"><span class="index">EX SITU</span><h3>Di luar habitat asli</h3><p>Merawat atau menyimpan spesies di tempat khusus. Contoh: kebun botani, bank benih, kebun plasma nutfah, dan penangkaran yang bertanggung jawab.</p></article>
+  </div>
+  <h3>Prinsip dasar konservasi</h3>
+  <p>Konservasi keanekaragaman hayati mencakup perlindungan spesies dan habitat, pemulihan ekosistem yang rusak, penggunaan sumber daya secara berkelanjutan, serta pembagian manfaat yang adil. Upaya konservasi biasanya lebih efektif jika dilakukan sejak awal, sebelum populasi organisme menurun tajam atau habitat terfragmentasi.</p>
+  <p>Pemantauan juga penting. Kondisi habitat dapat dinilai melalui pengamatan tutupan vegetasi, kualitas air, keberadaan spesies indikator, atau perubahan jumlah sampah. Data sederhana yang dicatat secara konsisten membantu masyarakat dan pengelola lingkungan mengevaluasi apakah suatu tindakan memberi hasil yang baik.</p>
+  <div class="callout"><strong>Konservasi dan pemanfaatan berkelanjutan saling berkaitan.</strong><p>Konservasi tidak selalu berarti melarang pemanfaatan alam, melainkan mengelolanya dengan bijaksana, berdasarkan bukti, memperhatikan daya dukung lingkungan, serta menghormati hak masyarakat setempat.</p></div>
+</section>
+
+<section id="etnosains">
+  <div class="section-head"><span class="section-num">06</span><div><span class="eyebrow">MATERI 03</span><h2>Etnosains dan Kearifan Lokal</h2><p>Pengetahuan masyarakat tentang alam dapat menjadi pintu masuk untuk memahami konservasi melalui pengalaman dan konteks budaya.</p></div></div>
+  <figure><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1400&q=85" alt="Hutan tropis yang menjadi bagian dari lingkungan hidup masyarakat"><figcaption>Pengetahuan lokal berkembang dari interaksi masyarakat dengan lingkungannya.</figcaption></figure>
+  <div class="grid2">
+    <article class="card"><h3>Apa itu etnosains?</h3><p>Etnosains mengkaji pengetahuan yang berkembang dalam masyarakat dan menghubungkannya dengan cara pandang ilmiah. Dalam biologi, siswa dapat membandingkan pengetahuan lokal dengan bukti ilmiah secara kritis.</p></article>
+    <article class="card"><h3>Apa itu kearifan lokal?</h3><p>Kearifan lokal mencakup nilai, aturan, praktik, dan pengetahuan yang tumbuh dalam komunitas untuk mengatur hubungan antarmanusia dan lingkungan.</p></article>
+  </div>
+  <h3 style="margin-top:25px">Contoh praktik yang dapat dipelajari</h3>
+  <article class="practice"><div class="practice-icon">≈</div><div><h3>Aturan adat pemanfaatan hutan atau sungai</h3><p>Di sejumlah komunitas, aturan lokal mengatur lokasi, waktu, atau cara mengambil sumber daya. Dampaknya perlu dipahami berdasarkan konteks setempat dan bukti ekologis.</p></div></article>
+  <article class="practice"><div class="practice-icon">❋</div><div><h3>Pelestarian benih dan varietas lokal</h3><p>Petani dapat menyimpan dan menukar benih lokal. Praktik ini membantu mempertahankan keragaman genetik dan pengetahuan mengenai karakter tanaman.</p></div></article>
+  <article class="practice"><div class="practice-icon">♧</div><div><h3>Hutan adat dan perlindungan habitat</h3><p>Di beberapa wilayah, masyarakat menetapkan area dengan aturan pemanfaatan tertentu. Pengakuan hak masyarakat dan tata kelola yang baik penting untuk mendukung konservasi.</p></div></article>
+  <h3>Bagaimana etnosains membantu pembelajaran biologi?</h3>
+  <p>Etnosains dapat menghubungkan pengetahuan yang diwariskan dalam masyarakat dengan konsep biologi yang dipelajari di sekolah. Contohnya, pengetahuan petani tentang waktu tanam dapat didiskusikan bersama konsep musim, kebutuhan air, jenis tanah, dan siklus hidup tanaman. Pengetahuan masyarakat tentang daerah yang menjadi tempat berkembang biak ikan dapat dikaji bersama konsep habitat, rantai makanan, dan reproduksi organisme.</p>
+  <p>Dalam pembelajaran, proses ini tidak bertujuan untuk langsung menyatakan suatu kebiasaan benar atau salah. Siswa belajar mengajukan pertanyaan, mendokumentasikan informasi dengan izin, membandingkan beberapa sumber, mengamati bukti, lalu menarik kesimpulan yang sesuai dengan data. Pengetahuan ilmiah dan pengetahuan lokal dapat saling melengkapi, tetapi keduanya perlu dipahami berdasarkan konteks dan cara memperoleh bukti.</p>
+  <h3>Contoh hubungan pengetahuan lokal dan konsep ilmiah</h3>
+  <div class="grid2">
+    <article class="card"><h3>Benih lokal</h3><p>Petani mengenali benih yang sesuai dengan kondisi lahan. Hal ini dapat dikaitkan dengan variasi genetik, adaptasi, seleksi buatan, dan ketahanan tanaman.</p></article>
+    <article class="card"><h3>Pengetahuan musim</h3><p>Pengamatan masyarakat terhadap hujan dan perubahan alam dapat dikaitkan dengan iklim, fenologi, kebutuhan air, serta kalender tanam.</p></article>
+    <article class="card"><h3>Larangan mengambil sumber daya di area tertentu</h3><p>Aturan lokal dapat dibahas bersama konsep daerah perlindungan, pemulihan populasi, dan pengelolaan sumber daya bersama.</p></article>
+    <article class="card"><h3>Pemanfaatan tumbuhan</h3><p>Nama dan kegunaan tumbuhan lokal dapat menjadi awal untuk mempelajari identifikasi spesies, kandungan senyawa, serta pentingnya verifikasi ilmiah dan keamanan penggunaan.</p></article>
+  </div>
+  <div class="callout"><strong>Belajar dengan hormat dan kritis</strong><p>Kearifan lokal tidak seragam dan tidak otomatis selalu berdampak positif. Dengarkan masyarakat pemilik pengetahuan, minta izin sebelum mendokumentasikan praktik budaya, periksa bukti ekologis, dan hindari generalisasi.</p></div>
+  <div class="panel"><strong>Aktivitas pengamatan</strong><p>Adakah aturan adat, kebiasaan bertani, pemanfaatan tumbuhan obat, atau tradisi yang membantu menjaga alam di lingkunganmu? Catat praktiknya, sumber informasinya, dan dampaknya terhadap lingkungan.</p></div>
+
+  <h3 style="margin-top:28px">Galeri keanekaragaman hayati</h3>
+  <p>Foto-foto berikut menunjukkan contoh habitat dan bentuk kehidupan yang saling terhubung. Saat mengamati gambar, perhatikan struktur vegetasi, kondisi habitat, dan kemungkinan peran organisme di dalam ekosistem.</p>
+  <div class="grid2 photo-gallery">
+    <figure><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85" alt="Pepohonan rapat di hutan tropis"><figcaption>Hutan: habitat, penyimpan karbon, dan pelindung tanah.</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=85" alt="Bentang alam dengan danau dan vegetasi"><figcaption>Ekosistem terbentuk dari interaksi makhluk hidup dan faktor abiotik.</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=85" alt="Beragam tanaman hijau"><figcaption>Variasi tumbuhan mendukung kehidupan organisme lain.</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=85" alt="Satwa di alam"><figcaption>Satwa liar memerlukan habitat yang aman dan saling terhubung.</figcaption></figure>
+  </div>
+
+</section>
+
+<section id="aksi">
+  <div class="section-head"><span class="section-num">07</span><div><span class="eyebrow">KEGIATAN PEMBELAJARAN</span><h2>Aksi Konservasi dan Refleksi</h2><p>Konservasi menjadi bermakna ketika pengetahuan ilmiah dan pengalaman lokal diterapkan secara bertanggung jawab.</p></div></div>
+  <figure><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=85" alt="Tanaman muda yang dirawat di kebun"><figcaption>Aksi sederhana dapat dimulai dari lingkungan sekolah dan rumah.</figcaption></figure>
+  <div class="grid2">
+    <article class="card"><span class="index">01 · AMATI</span><h3>Kenali lingkungan</h3><p>Catat tiga sampai lima jenis tumbuhan atau hewan yang ditemukan di halaman sekolah, kebun, taman, atau lingkungan sekitar. Jangan mengganggu organisme.</p></article>
+    <article class="card"><span class="index">02 · GALI CERITA</span><h3>Diskusi dengan masyarakat</h3><p>Tanyakan nama lokal, kegunaan, atau aturan pemanfaatan organisme kepada guru, keluarga, atau warga dengan sopan dan meminta izin.</p></article>
+    <article class="card"><span class="index">03 · PERIKSA</span><h3>Bandingkan dengan sumber ilmiah</h3><p>Gunakan buku pelajaran atau sumber ilmiah tepercaya untuk menguji dan melengkapi informasi yang diperoleh.</p></article>
+    <article class="card"><span class="index">04 · BERTINDAK</span><h3>Rancang aksi sederhana</h3><p>Misalnya merawat tanaman lokal, mengurangi sampah, menjaga area hijau, atau membuat poster pelestarian habitat.</p></article>
+  </div>
+  <div class="panel">
+    <h3>Rencana aksiku</h3>
+    <p class="muted">Isian ini hanya berada di browser dan tidak dikirim ke server. Kamu dapat mencetak atau menyimpan halaman sebagai PDF.</p>
+    <label for="issue">Masalah lingkungan yang saya amati</label><textarea id="issue" rows="2" placeholder="Contoh: sampah plastik di sekitar taman sekolah..."></textarea>
+    <label for="wisdom">Pengetahuan atau kebiasaan lokal yang berkaitan</label><textarea id="wisdom" rows="2" placeholder="Tuliskan hasil pengamatan atau percakapan..."></textarea>
+    <label for="action">Tindakan konservasi yang bisa dilakukan</label><textarea id="action" rows="2" placeholder="Tuliskan tindakan yang realistis..."></textarea>
+    <button class="button" onclick="window.print()">Cetak / simpan refleksi</button>
+  </div>
+</section>
+
+<section id="kuis">
+  <div class="section-head"><span class="section-num">08</span><div><span class="eyebrow">EVALUASI PEMAHAMAN</span><h2>Kuis Interaktif</h2><p>Pilih satu jawaban yang paling tepat. Tekan tombol periksa untuk melihat nilai dan pembahasan.</p></div></div>
+  <form id="quizForm">
+    <div id="questions"></div>
+    <button class="button" type="submit">Periksa jawaban ↗</button>
+    <button class="button secondary" type="button" id="reset">Ulangi kuis</button>
+  </form>
+  <div id="result" hidden aria-live="polite"></div>
+</section>
+
+<section id="pustaka">
+  <div class="section-head"><span class="section-num">09</span><div><span class="eyebrow">RUJUKAN</span><h2>Daftar Pustaka</h2><p>Daftar rujukan dasar untuk membantu pendalaman materi. Periksa kembali edisi dan detail bibliografi sesuai format sitasi yang diwajibkan.</p></div></div>
+  <ol>
+    <li>Convention on Biological Diversity. (1992). <em>Convention on Biological Diversity</em>. United Nations.</li>
+    <li>Food and Agriculture Organization of the United Nations. (2019). <em>The State of the World’s Biodiversity for Food and Agriculture</em>. FAO.</li>
+    <li>Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. (2019). <em>Global Assessment Report on Biodiversity and Ecosystem Services</em>. IPBES Secretariat.</li>
+    <li>Primack, R. B. (2014). <em>Essentials of Conservation Biology</em> (6th ed.). Sinauer Associates.</li>
+    <li>United Nations Environment Programme & Food and Agriculture Organization of the United Nations. (2020). <em>The UN Decade on Ecosystem Restoration 2021–2030</em>.</li>
+  </ol>
+  <div class="callout"><strong>Catatan akademik</strong><p>Untuk versi final tugas, tambahkan sumber jurnal atau buku yang secara khusus membahas etnosains dan kearifan lokal di wilayah yang dikaji. Cocokkan setiap kutipan materi dengan sumber aslinya dan gunakan format daftar pustaka sesuai arahan pengajar.</p></div>
+</section>
+
+<footer><span>JEJAK LESTARI · E-MODUL BIOLOGI SMA</span><span>Disusun oleh Yunia Dwi Rahmawati</span></footer>
+</main>
+</div>
+<a class="backtop" href="#top" aria-label="Kembali ke atas">↑</a>
+<script>
+const quiz = [
+ {q:"Keanekaragaman gen ditunjukkan oleh contoh …",o:["Berbagai varietas padi dalam satu spesies","Perbedaan antara hutan mangrove dan hutan pegunungan","Keberadaan burung, ikan, dan mamalia di suatu wilayah","Perbedaan antara ekosistem sungai dan danau"],a:0,e:"Keanekaragaman gen merupakan variasi genetik di dalam satu spesies, misalnya varietas padi yang memiliki sifat berbeda."},
+ {q:"Upaya melestarikan orangutan di habitat alaminya termasuk konservasi …",o:["Ex situ","In situ","Domestikasi","Introduksi"],a:1,e:"Konservasi in situ dilakukan di habitat asli organisme."},
+ {q:"Manakah contoh konservasi ex situ?",o:["Menetapkan kawasan hutan lindung","Melindungi terumbu karang di laut","Menyimpan benih tanaman di bank benih","Mengawasi perburuan di taman nasional"],a:2,e:"Bank benih menyimpan materi genetik di luar habitat alami tumbuhan."},
+ {q:"Etnosains dalam pembelajaran konservasi mengajak siswa untuk …",o:["Menganggap semua kepercayaan sebagai fakta ilmiah","Mengabaikan pengalaman masyarakat","Menghubungkan pengetahuan masyarakat dengan kajian ilmiah secara kritis","Mengganti ilmu biologi dengan tradisi"],a:2,e:"Etnosains menghubungkan pengetahuan dalam masyarakat dengan penjelasan ilmiah secara kritis dan menghormati konteks budaya."},
+ {q:"Mengapa pelestarian benih varietas lokal mendukung konservasi?",o:["Mengurangi seluruh variasi tanaman","Menjaga keragaman genetik tanaman budidaya","Membuat semua tanaman memiliki sifat sama","Menghilangkan kebutuhan merawat lahan"],a:1,e:"Beragam varietas lokal membantu mempertahankan sumber daya genetik tanaman."},
+ {q:"Saat mendokumentasikan praktik budaya, tindakan yang tepat adalah …",o:["Merekam tanpa memberi tahu","Menyebarkan semua informasi","Meminta izin dan menghormati batas informasi yang boleh dibagikan","Mengubah cerita warga"],a:2,e:"Dokumentasi perlu dilakukan dengan persetujuan dan menghormati batas yang ditetapkan pemilik pengetahuan."},
+ {q:"Pernyataan yang tepat tentang kearifan lokal adalah …",o:["Semua praktik lokal pasti baik di semua tempat","Kearifan lokal beragam dan perlu dipahami sesuai konteksnya","Kearifan lokal tidak boleh dikaji dengan sains","Kearifan lokal hanya cerita masa lalu"],a:1,e:"Kearifan lokal berbeda antarkomunitas dan perlu dipahami sesuai konteks sosial-ekologis serta bukti yang relevan."},
+ {q:"Langkah awal yang baik untuk menjaga tumbuhan lokal di sekolah adalah …",o:["Menanam satu jenis saja","Mengambil tumbuhan liar tanpa izin","Mengamati tumbuhan sekitar dan berdiskusi dengan warga atau ahli","Membersihkan semua tumbuhan alami"],a:2,e:"Pengamatan dan dialog membantu mengenali spesies lokal serta merancang tindakan konservasi yang bertanggung jawab."}
+];
+const letters=["A","B","C","D"];
+const qBox=document.getElementById("questions");
+qBox.innerHTML=quiz.map((q,i)=>`<div class="quiz-q" data-q="${i}"><h3>${i+1}. ${q.q}</h3>${q.o.map((op,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}">${letters[j]}. ${op}</label>`).join("")}<div class="feedback" hidden></div></div>`).join("");
+document.getElementById("quizForm").addEventListener("submit",e=>{
+ e.preventDefault();let score=0,blank=0;
+ quiz.forEach((q,i)=>{const card=document.querySelector(`[data-q="${i}"]`),chosen=card.querySelector(`input[name="q${i}"]:checked`),fb=card.querySelector(".feedback");if(!chosen)blank++;const right=chosen&&Number(chosen.value)===q.a;if(right)score++;fb.hidden=false;fb.className="feedback "+(right?"good":"bad");fb.textContent=(right?"Benar. ":chosen?"Belum tepat. ":"Belum dijawab. ")+q.e;});
+ const percent=Math.round(score/quiz.length*100),r=document.getElementById("result");r.hidden=false;r.innerHTML=`<div style="font-size:42px;font-weight:800;color:var(--forest)">${score}/${quiz.length}</div><h3>${percent>=80?"Hebat, pemahamanmu kuat!":percent>=60?"Bagus, terus perdalam!":"Tetap semangat belajar!"}</h3><p>Nilai kamu: <strong>${percent}/100</strong>. ${blank?`Kamu belum menjawab ${blank} soal. `:""}Baca pembahasan setiap soal untuk memperkuat pemahaman.</p>`;r.scrollIntoView({behavior:"smooth",block:"center"});
+});
+document.getElementById("reset").addEventListener("click",()=>{document.getElementById("quizForm").reset();document.querySelectorAll(".feedback").forEach(f=>{f.hidden=true;f.textContent=""});const r=document.getElementById("result");r.hidden=true;r.innerHTML="";});
+</script>
+</body>
+</html>
